@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="NotesWala provides clear programming notes for students learning C, Python, Java, web development, and more." />
+  <title>NotesWala | Programming Notes Made Simple</title>
+
+  <!-- Tailwind CSS via CDN. For production, pin a version or compile Tailwind locally. -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            ink: '#10233f',
+            brand: '#1d5fd1',
+            'brand-dark': '#174aa4',
+            mist: '#f4f7fb'
+          },
+          fontFamily: {
+            sans: ['Inter', 'ui-sans-serif', 'system-ui', 'sans-serif']
+          }
+        }
+      }
+    };
+  </script>
+</head>
+<body class="bg-mist text-slate-700 antialiased">
+  <!-- Header and primary navigation -->
+  <header class="sticky top-0 z-40 border-b border-slate-200/80 bg-white/95 backdrop-blur">
+    <div class="mx-auto flex max-w-7xl items-center gap-4 px-4 py-4 sm:px-6 lg:px-8">
+      <a href="index.html" class="shrink-0 text-xl font-extrabold tracking-tight text-ink" aria-label="NotesWala home">
+        Notes<span class="text-brand">Wala</span>
+      </a>
+      <nav class="hidden items-center gap-6 text-sm font-semibold text-slate-600 md:flex" aria-label="Main navigation">
+        <a class="text-brand" href="index.html">Home</a>
+        <a class="transition hover:text-brand" href="#subjects">Subjects</a>
+        <a class="transition hover:text-brand" href="#about">About</a>
+        <a class="transition hover:text-brand" href="#contact">Contact</a>
+      </nav>
+      <form class="ml-auto hidden w-full max-w-xs sm:flex" action="#subjects" role="search">
+        <label class="sr-only" for="site-search">Search notes</label>
+        <div class="relative w-full">
+          <svg class="pointer-events-none absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-slate-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><path d="m20 20-4-4"></path></svg>
+          <input id="site-search" type="search" placeholder="Search notes..." class="w-full rounded-lg border border-slate-200 bg-slate-50 py-2 pl-9 pr-3 text-sm outline-none transition focus:border-brand focus:ring-2 focus:ring-blue-100" />
+        </div>
+      </form>
+      <button class="ml-auto rounded-lg border border-slate-200 p-2 text-slate-600 md:hidden" type="button" aria-label="Open menu">
+        <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"></path></svg>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <!-- AdSense placeholder: place an approved responsive ad unit here. -->
+    <div class="mx-auto max-w-7xl px-4 pt-5 sm:px-6 lg:px-8">
+      <div class="flex min-h-[90px] items-center justify-center rounded-xl border border-dashed border-slate-300 bg-white text-xs font-medium uppercase tracking-wider text-slate-400" aria-label="Advertisement placeholder">
+        Advertisement
+      </div>
+    </div>
+
+    <!-- Hero section -->
+    <section class="relative overflow-hidden bg-white">
+      <div class="mx-auto grid max-w-7xl items-center gap-10 px-4 py-16 sm:px-6 md:grid-cols-[1.2fr_0.8fr] md:py-24 lg:px-8">
+        <div>
+          <p class="mb-4 inline-flex items-center gap-2 rounded-full bg-blue-50 px-3 py-1 text-xs font-bold uppercase tracking-widest text-brand"><span class="h-1.5 w-1.5 rounded-full bg-brand"></span> Learn with clarity</p>
+          <h1 class="max-w-2xl text-4xl font-black tracking-tight text-ink sm:text-5xl lg:text-6xl">Programming notes that make learning click.</h1>
+          <p class="mt-6 max-w-xl text-lg leading-8 text-slate-600">Focused, easy-to-revise notes for the subjects you use to build your future. Study concepts, review examples, and move forward with confidence.</p>
+          <div class="mt-8 flex flex-wrap gap-3">
+            <a href="#subjects" class="inline-flex items-center gap-2 rounded-lg bg-brand px-5 py-3 text-sm font-bold text-white shadow-lg shadow-blue-200 transition hover:bg-brand-dark focus:outline-none focus:ring-4 focus:ring-blue-100">Explore Notes <span aria-hidden="true">&#8594;</span></a>
+            <a href="#about" class="inline-flex items-center rounded-lg border border-slate-200 bg-white px-5 py-3 text-sm font-bold text-ink transition hover:border-brand hover:text-brand">How it works</a>
+          </div>
+        </div>
+        <div class="relative mx-auto w-full max-w-sm">
+          <div class="absolute -inset-4 rounded-[2rem] bg-blue-50"></div>
+          <div class="relative rounded-2xl border border-blue-100 bg-white p-6 shadow-xl shadow-slate-200/70">
+            <div class="flex items-center justify-between border-b border-slate-100 pb-5"><span class="text-sm font-bold text-ink">Your study desk</span><span class="rounded-full bg-emerald-50 px-2 py-1 text-xs font-bold text-emerald-700">Ready</span></div>
+            <div class="space-y-4 py-5">
+              <div class="flex items-center gap-3"><span class="flex h-9 w-9 items-center justify-center rounded-lg bg-blue-50 text-sm font-black text-brand">Py</span><div class="flex-1"><p class="text-sm font-bold text-ink">Python fundamentals</p><div class="mt-2 h-1.5 rounded-full bg-slate-100"><div class="h-1.5 w-3/4 rounded-full bg-brand"></div></div></div><span class="text-xs font-semibold text-slate-400">75%</span></div>
+              <div class="flex items-center gap-3"><span class="flex h-9 w-9 items-center justify-center rounded-lg bg-orange-50 text-sm font-black text-orange-600">C</span><div class="flex-1"><p class="text-sm font-bold text-ink">C programming</p><div class="mt-2 h-1.5 rounded-full bg-slate-100"><div class="h-1.5 w-1/2 rounded-full bg-orange-500"></div></div></div><span class="text-xs font-semibold text-slate-400">50%</span></div>
+              <div class="flex items-center gap-3"><span class="flex h-9 w-9 items-center justify-center rounded-lg bg-amber-50 text-sm font-black text-amber-600">DS</span><div class="flex-1"><p class="text-sm font-bold text-ink">Data structures</p><div class="mt-2 h-1.5 rounded-full bg-slate-100"><div class="h-1.5 w-1/4 rounded-full bg-amber-500"></div></div></div><span class="text-xs font-semibold text-slate-400">25%</span></div>
+            </div>
+            <p class="border-t border-slate-100 pt-4 text-xs font-medium text-slate-500">Small steps. Strong foundations.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Subject directory -->
+    <section id="subjects" class="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
+      <div class="flex flex-col justify-between gap-4 sm:flex-row sm:items-end"><div><p class="text-sm font-bold uppercase tracking-widest text-brand">Browse the library</p><h2 class="mt-2 text-3xl font-black tracking-tight text-ink">Choose a subject</h2></div><p class="max-w-md text-sm leading-6 text-slate-500">Start with the language or concept you are learning today. New notes can be added as your syllabus grows.</p></div>
+      <div class="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+        <!-- Subject card -->
+        <article class="group rounded-xl border border-slate-200 bg-white p-6 shadow-sm transition hover:-translate-y-1 hover:border-blue-200 hover:shadow-lg hover:shadow-slate-200/60"><div class="flex h-11 w-11 items-center justify-center rounded-lg bg-blue-50 font-black text-brand">Py</div><h3 class="mt-5 text-xl font-bold text-ink">Python</h3><p class="mt-2 min-h-12 text-sm leading-6 text-slate-500">Learn syntax, functions, collections, and object-oriented programming.</p><a href="python.html" class="mt-5 inline-flex items-center gap-2 text-sm font-bold text-brand transition group-hover:gap-3">View notes <span aria-hidden="true">&#8594;</span></a></article>
+        <article class="group rounded-xl border border-slate-200 bg-white p-6 shadow-sm transition hover:-translate-y-1 hover:border-blue-200 hover:shadow-lg hover:shadow-slate-200/60"><div class="flex h-11 w-11 items-center justify-center rounded-lg bg-orange-50 font-black text-orange-600">C</div><h3 class="mt-5 text-xl font-bold text-ink">C Programming</h3><p class="mt-2 min-h-12 text-sm leading-6 text-slate-500">Build a strong base with variables, pointers, memory, and file handling.</p><a href="c.html" class="mt-5 inline-flex items-center gap-2 text-sm font-bold text-brand transition group-hover:gap-3">View notes <span aria-hidden="true">&#8594;</span></a></article>
+        <article class="group rounded-xl border border-slate-200 bg-white p-6 shadow-sm transition hover:-translate-y-1 hover:border-blue-200 hover:shadow-lg hover:shadow-slate-200/60"><div class="flex h-11 w-11 items-center justify-center rounded-lg bg-red-50 font-black text-red-600">Ja</div><h3 class="mt-5 text-xl font-bold text-ink">Java</h3><p class="mt-2 min-h-12 text-sm leading-6 text-slate-500">Review core Java, classes, interfaces, exceptions, and collections.</p><a href="java.html" class="mt-5 inline-flex items-center gap-2 text-sm font-bold text-brand transition group-hover:gap-3">View notes <span aria-hidden="true">&#8594;</span></a></article>
+        <article class="group rounded-xl border border-slate-200 bg-white p-6 shadow-sm transition hover:-translate-y-1 hover:border-blue-200 hover:shadow-lg hover:shadow-slate-200/60"><div class="flex h-11 w-11 items-center justify-center rounded-lg bg-amber-50 font-black text-amber-600">DS</div><h3 class="mt-5 text-xl font-bold text-ink">Data Structures</h3><p class="mt-2 min-h-12 text-sm leading-6 text-slate-500">Understand arrays, linked lists, stacks, queues, trees, and graphs.</p><a href="data-structures.html" class="mt-5 inline-flex items-center gap-2 text-sm font-bold text-brand transition group-hover:gap-3">View notes <span aria-hidden="true">&#8594;</span></a></article>
+        <article class="group rounded-xl border border-slate-200 bg-white p-6 shadow-sm transition hover:-translate-y-1 hover:border-blue-200 hover:shadow-lg hover:shadow-slate-200/60"><div class="flex h-11 w-11 items-center justify-center rounded-lg bg-emerald-50 font-black text-emerald-600">&lt;/&gt;</div><h3 class="mt-5 text-xl font-bold text-ink">Web Development</h3><p class="mt-2 min-h-12 text-sm leading-6 text-slate-500">Get comfortable with HTML, CSS, JavaScript, and modern web fundamentals.</p><a href="web-development.html" class="mt-5 inline-flex items-center gap-2 text-sm font-bold text-brand transition group-hover:gap-3">View notes <span aria-hidden="true">&#8594;</span></a></article>
+        <article class="group rounded-xl border border-slate-200 bg-white p-6 shadow-sm transition hover:-translate-y-1 hover:border-blue-200 hover:shadow-lg hover:shadow-slate-200/60"><div class="flex h-11 w-11 items-center justify-center rounded-lg bg-violet-50 font-black text-violet-600">DB</div><h3 class="mt-5 text-xl font-bold text-ink">Databases</h3><p class="mt-2 min-h-12 text-sm leading-6 text-slate-500">Practice relational concepts, SQL queries, normalization, and database design.</p><a href="databases.html" class="mt-5 inline-flex items-center gap-2 text-sm font-bold text-brand transition group-hover:gap-3">View notes <span aria-hidden="true">&#8594;</span></a></article>
+      </div>
+    </section>
+
+    <!-- Notice and mid-page ad placement -->
+    <section class="mx-auto max-w-7xl px-4 pb-16 sm:px-6 lg:px-8">
+      <div class="flex flex-col gap-4 rounded-xl border border-blue-100 bg-blue-50 p-5 sm:flex-row sm:items-start"><svg class="mt-0.5 h-5 w-5 shrink-0 text-brand" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M12 11v5M12 8h.01"></path></svg><div><h2 class="font-bold text-ink">A faster way to study</h2><p class="mt-1 text-sm leading-6 text-slate-600">Note files are hosted in separate dedicated GitHub repositories. This keeps NotesWala fast and lets you download the latest material directly from the source.</p></div></div>
+      <div class="mt-8 flex min-h-[90px] items-center justify-center rounded-xl border border-dashed border-slate-300 bg-white text-xs font-medium uppercase tracking-wider text-slate-400" aria-label="Advertisement placeholder">Advertisement</div>
+    </section>
+
+    <!-- About and contact anchors for the primary navigation -->
+    <section id="about" class="border-y border-slate-200 bg-white"><div class="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8"><h2 class="text-2xl font-black text-ink">Notes without the noise.</h2><p class="mt-3 max-w-2xl leading-7 text-slate-600">NotesWala is a simple study companion for programming students. The goal is straightforward: useful explanations, clean organization, and quick access to revision material.</p></div></section>
+    <section id="contact" class="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8"><h2 class="text-2xl font-black text-ink">Contact</h2><p class="mt-3 text-slate-600">Have a suggestion or found an issue? Email <a class="font-semibold text-brand hover:underline" href="mailto:hello@noteswala.example">hello@noteswala.example</a>.</p></section>
+  </main>
+
+  <!-- Footer with policy links required for a trustworthy AdSense-ready site -->
+  <footer class="border-t border-slate-200 bg-white">
+    <div class="mx-auto flex max-w-7xl flex-col gap-5 px-4 py-8 text-sm sm:px-6 md:flex-row md:items-center md:justify-between lg:px-8">
+      <p class="text-slate-500">&copy; 2026 NotesWala. Built for better study sessions.</p>
+      <nav class="flex flex-wrap gap-x-5 gap-y-2 font-semibold text-slate-600" aria-label="Footer navigation"><a class="hover:text-brand" href="index.html">Home</a><a class="hover:text-brand" href="#subjects">Subjects</a><a class="hover:text-brand" href="privacy-policy.html">Privacy Policy</a><a class="hover:text-brand" href="terms.html">Terms of Service</a><a class="hover:text-brand" href="#contact">Contact Us</a></nav>
+    </div>
+    <!-- AdSense placeholder: footer ad unit can be inserted above or below this note. -->
+    <div class="mx-auto max-w-7xl px-4 pb-6 sm:px-6 lg:px-8"><div class="flex min-h-[90px] items-center justify-center rounded-xl border border-dashed border-slate-300 bg-slate-50 text-xs font-medium uppercase tracking-wider text-slate-400" aria-label="Advertisement placeholder">Advertisement</div></div>
+  </footer>
+</body>
+</html>
